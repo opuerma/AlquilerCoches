@@ -1,0 +1,35 @@
+@use '../../variables' as v;
+
+.eficiencia-container {
+    margin-top: v.$separacion-secciones;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imagen {
+    width: 48%;
+    height: 100%;
+
+    img {
+        height: 100%;
+        width: fit-content;
+        transform: scaleX(-1);
+    }
+}
+
+.explicacion {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .titulo {
+        font-size: xx-large;
+        font-weight: bold;
+    }
+}

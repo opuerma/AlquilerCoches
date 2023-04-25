@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use './app/variables' as v;
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: v.$font;
+    padding: 0;
+    margin: 0;
+}

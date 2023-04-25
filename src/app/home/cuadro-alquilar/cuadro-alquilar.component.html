@@ -1,0 +1,39 @@
+<div class="main-alquilar">
+    <div class="cuadro-container">
+
+        <div class="titulo">Busca y alquila tu coche</div>
+
+        <form [formGroup]="miFormulario" (ngSubmit)="onSubmit()" class="datos">
+
+            <div class="item item-lugar">
+                <label for="lugar">Lugar de recogida:</label>
+                <select id="lugar" name="lugar" class="eleccion" formControlName="lugar">
+                    <option value="" disabled selected hidden>Selecciona un lugar de recogida</option>
+                    <option value="bcn">Barcelona</option>
+                    <option value="zar">Zaragoza</option>
+                    <option value="bil">Bilbao</option>
+                    <option value="mad">Madrid</option>
+                    <option value="sev">Sevilla</option>
+                </select>
+            </div>
+    
+            <div class="item">
+                <label for="recogida">Fecha de recogida:</label>
+                <input type="date" id="recogida" name="recogida" [min]="hoy" formControlName="recogida">
+            </div>
+    
+            <div class="item">
+                <label for="vuelta">Fecha de vuelta:</label>
+                <input type="date" id="vuelta" name="vuelta" [min]="hoy" formControlName="vuelta">
+            </div>
+
+            <input type="submit" class="item boton" value="Buscar coches" tabindex="0">
+
+        </form>
+
+        <div class="error" *ngIf="errores">
+            Por favor, rellena todos los campos antes de buscar los coches disponibles.
+        </div>
+
+    </div>
+</div>

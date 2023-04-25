@@ -1,0 +1,15 @@
+@use './variables' as v;
+
+
+.contenedor-total {
+    width: 99vw;
+}
+
+
+.contenedor-principal {
+    outline: 3px solid red;
+    width: v.$ancho-max;
+    max-width: v.$ancho-max;
+    min-width: v.$ancho-min;
+    margin: auto;
+}
