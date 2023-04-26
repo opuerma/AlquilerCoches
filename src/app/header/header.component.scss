@@ -45,9 +45,11 @@
 .elemento {
     margin: 10px;
     cursor: pointer;
+    font-weight: v.$bold-links;
 
     &:hover {
-        text-decoration: underline;
+        //text-decoration: underline;
+        color: v.$c-azul;
     }
 }
 
@@ -62,8 +64,13 @@
     cursor: pointer;
 }
 
-.iniciar-sesion:hover {
-    text-decoration: underline;
+.iniciar-sesion {
+    font-weight: v.$bold-links;
+
+    &:hover {
+    //text-decoration: underline;
+    color: v.$c-azul
+    }
 }
 
 .registro {

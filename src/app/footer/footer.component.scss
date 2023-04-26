@@ -43,7 +43,8 @@ a {
     cursor: pointer;
 
     &:hover {
-        text-decoration: underline;
+        //text-decoration: underline;
+        color: v.$c-azul;
     }
 }
 
@@ -53,6 +54,7 @@ a {
 
     &:hover {
         text-decoration: none;
+        color: black;
     }
 }
 
@@ -62,6 +64,12 @@ a {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
+    &:hover {
+        a{
+            color: v.$c-azul;
+        }
+    }
 }
 .icon, .link {
     height: 30px;
@@ -76,10 +84,6 @@ a {
     img {
         height: 80%;
         width: fit-content;
-    }
-
-    &:hover {
-        cursor: default;
     }
 }
 
@@ -117,5 +121,6 @@ a {
     &:hover {
         background-color: v.$c-azul-claro;
         text-decoration: none;
+        color: white;
     }
 }
