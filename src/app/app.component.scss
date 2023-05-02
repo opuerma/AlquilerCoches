@@ -7,16 +7,8 @@
 
 
 .contenedor-principal {
-    outline: 3px solid black;
-    //width: v.$ancho-max;
     width: 90%;
     max-width: v.$ancho-max;
     min-width: v.$ancho-min;
     margin: auto;
-}
-
-@media only screen and (max-width: 600px) {
-    .container {
-        width: 100%;
-    }
 }

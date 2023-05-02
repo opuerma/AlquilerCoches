@@ -17,8 +17,6 @@ import { HomeComponent } from './home/home.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { CochesComponent } from './coches/coches.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { MovilComponent } from './header/movil/movil.component';
-import { OrdenadorComponent } from './header/ordenador/ordenador.component';
 
 @NgModule({
   declarations: [
@@ -33,9 +31,7 @@ import { OrdenadorComponent } from './header/ordenador/ordenador.component';
     HomeComponent,
     NosotrosComponent,
     CochesComponent,
-    ContactoComponent,
-    MovilComponent,
-    OrdenadorComponent
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
