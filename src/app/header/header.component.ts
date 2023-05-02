@@ -12,16 +12,7 @@ export class HeaderComponent implements OnInit {
   Breakpoints = Breakpoints;
   
   movil: boolean;
-  customBreakpoint: string = '(min-width: 900px)';
-  
-  /*
-  readonly breakpoint$ = this.breakpointObserver
-    .observe([Breakpoints.Large, Breakpoints.Medium, Breakpoints.Small, '(min-width: 500px)'])
-    .pipe(
-      tap(value => console.log(value)),
-      distinctUntilChanged()
-    );
-  */
+  customBreakpoint: string = '(max-width: 900px)';
   
   readonly breakpoint$ = this.breakpointObserver
     .observe(this.customBreakpoint)
@@ -40,10 +31,10 @@ export class HeaderComponent implements OnInit {
 
   private breakpointChanged() {
     if(this.breakpointObserver.isMatched(this.customBreakpoint)) {
-      this.movil = false;
+      this.movil = true;
     }
     else {
-      this.movil = true;
+      this.movil = false;
     }
   }
 

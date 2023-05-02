@@ -88,3 +88,30 @@
     margin-top: 5px;
     font-weight: bold;
 }
+
+
+
+@media only screen and (max-width: 1150px) {
+    .item-lugar {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    .datos {
+        flex-direction: column;
+    }
+
+    .item {
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    .boton {
+        margin-top: 20px;
+    }
+
+    .error {
+        margin-top: 10px;
+    }
+}
