@@ -1,27 +1,8 @@
-@use '../variables' as v;
-
-
-.main-nav {
-    height: v.$altura-nav;
-    width: 99vw;
-    min-width: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: white;
-    //background-image: linear-gradient(to bottom, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0));
-}
+@use '../../variables' as v;
 
 
 .contenedor-nav {
-    width: 90%;
-    max-width: v.$ancho-max;
-    min-width: v.$ancho-min;
+    width: v.$ancho-max;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -29,18 +10,15 @@
 }
 
 
-.logo, .menu {
+.logo {
     height: v.$altura-nav;
     display: flex;
     align-items: center;
     cursor: pointer;
-}
 
-.logo img {
-    height: 80%;
-}
-.menu img {
-    height: 60%;
+    img {
+        height: 80%;
+    }
 }
 
 

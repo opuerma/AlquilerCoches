@@ -1,8 +1,9 @@
 <div class="main-nav">
-    <div class="contenedor-nav">
+
+    <div class="contenedor-nav" *ngIf="!movil">
 
         <div class="logo" routerLink="">
-            <img src="../../assets/img/logo.svg" alt="">
+            <img src="../../../assets/img/logo.svg" alt="">
         </div>
     
         <div class="lista">
@@ -18,6 +19,20 @@
                 <span>Registrarse</span>
             </div>
         </div>
-
+        
     </div>
+
+
+    <div class="contenedor-nav" *ngIf="movil">
+
+        <div class="logo" routerLink="">
+            <img src="../../../assets/img/logo.svg" alt="">
+        </div>
+        
+        <div class="menu">
+            <img src="../../../assets/img/menu-icon.svg" alt="Menú">
+        </div>
+        
+    </div>
+
 </div>

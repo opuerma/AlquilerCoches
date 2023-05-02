@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { distinctUntilChanged, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -8,23 +9,42 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private responsive: BreakpointObserver) { }
-
-  ngOnInit() {
-
-    console.log('TabletPortrait: ', Breakpoints.TabletPortrait);
-    console.log('TabletLandscape: ', Breakpoints.TabletLandscape);
-    console.log('HandsetPortrait: ', Breakpoints.HandsetPortrait);
-    console.log('HandsetLandscape: ', Breakpoints.HandsetLandscape);
+  Breakpoints = Breakpoints;
   
-    this.responsive.observe(Breakpoints.HandsetLandscape)
-      .subscribe(result => {
+  movil: boolean;
+  customBreakpoint: string = '(min-width: 900px)';
+  
+  /*
+  readonly breakpoint$ = this.breakpointObserver
+    .observe([Breakpoints.Large, Breakpoints.Medium, Breakpoints.Small, '(min-width: 500px)'])
+    .pipe(
+      tap(value => console.log(value)),
+      distinctUntilChanged()
+    );
+  */
+  
+  readonly breakpoint$ = this.breakpointObserver
+    .observe(this.customBreakpoint)
+    .pipe(
+      tap(),
+      distinctUntilChanged()
+    );
 
-        if (result.matches) {
-          console.log("screens matches HandsetLandscape");
-        }
-    });
-    
+  constructor(private breakpointObserver: BreakpointObserver) { }
+
+  ngOnInit(): void {
+    this.breakpoint$.subscribe(() =>
+      this.breakpointChanged()
+    );
+  }
+
+  private breakpointChanged() {
+    if(this.breakpointObserver.isMatched(this.customBreakpoint)) {
+      this.movil = false;
+    }
+    else {
+      this.movil = true;
+    }
   }
 
 }
