@@ -64,6 +64,7 @@ a {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    white-space: nowrap;
 
     &:hover {
         a{
@@ -122,5 +123,38 @@ a {
         background-color: v.$c-azul-claro;
         text-decoration: none;
         color: white;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .footer-container {
+        margin-top: v.$separacion-secciones-movil;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seccion {
+        width: 50%;
+        margin: 10px 0px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .seccion {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .seccion {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .seccion {
+        width: 90%;
     }
 }
