@@ -1,0 +1,163 @@
+@use '../variables' as v;
+
+
+.nosotros-container {
+    margin-top: v.$separacion-secciones;
+    width: 100%;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -50px;
+}
+
+
+.texto-container {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.titulo {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    white-space: nowrap;
+    font-size: normal;
+    margin: 5px 0px;
+    cursor: pointer;
+
+    &:hover {
+        a, svg{
+            color: v.$c-azul;
+        }
+    }
+}
+.icon, .link {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.icon {
+    width: 30px;
+
+    img {
+        height: 80%;
+        width: fit-content;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+
+.form-container {
+    width: 50%;
+}
+
+.campo {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    label {
+        font-weight: 600;
+    }
+
+    input, textarea {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        height: v.$altura-inputs-contacto;
+        font-family: v.$font;
+        padding: 0px 15px;
+        border-radius: v.$border-radius;
+        border: none;
+        background-color: #e0e0e0;
+        width: 100%;
+    }
+
+    textarea {
+        height: 150px;
+        resize: none;
+        padding-top: 10px;
+    }
+}
+
+
+.boton {
+    background-color: v.$c-azul;
+    color: white;
+    width: 100%;
+    height: v.$altura-inputs-contacto + 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: v.$sombra;
+    border-radius: v.$border-radius;
+    cursor: pointer;
+    font-family: v.$font;
+    font-weight: 600;
+    font-size: medium;
+    border: none;
+
+    &:hover {
+        background-color: v.$c-azul-claro;
+        text-decoration: none;
+        color: white;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 960px) {
+    .nosotros-container {
+        flex-direction: column;
+    }
+
+    .texto-container, .form-container {
+        width: 90%;
+    }
+
+    .texto-container {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .form-container {
+        margin-top: 80px;
+    }
+
+    .links-container {
+        align-items: center;
+    }
+}

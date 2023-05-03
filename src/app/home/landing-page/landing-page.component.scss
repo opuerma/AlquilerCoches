@@ -1,7 +1,6 @@
 @use '../../variables' as v;
 
 .main-landing {
-    //background-color: grey;
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -96,6 +95,21 @@
 }
 
 
+@media only screen and (max-height: 730px) {
+    .div-intro {
+        margin-top: v.$altura-nav;
+    }
+}
+@media only screen and (max-height: 620px) {
+    .subtitulo {
+        display: none;
+        visibility: hidden;
+    }
+
+    .botones {
+        margin-top: 40px;
+    }
+}
 
 
 @media only screen and (max-width: 1600px) {

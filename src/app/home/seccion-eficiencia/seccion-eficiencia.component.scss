@@ -1,81 +1,121 @@
 @use '../../variables' as v;
 
+
 .eficiencia-container {
     margin-top: v.$separacion-secciones;
     width: 100%;
-    height: 400px;
+    color: black;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
-.imagen {
+
+.img-container {
     width: 48%;
-    height: 100%;
-    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img {
-        height: 100%;
-        width: fit-content;
-        transform: scaleX(-1);
+        height: fit-content;
+        width: 70%;
+        -webkit-animation: girar 20s linear infinite;
+        -moz-animation: girar 20s linear infinite;
+        animation: girar 20s linear infinite;
+    }
+    @-moz-keyframes girar { 
+        100% { -moz-transform: rotate(360deg); } 
+    }
+    @-webkit-keyframes girar { 
+        100% { -webkit-transform: rotate(360deg); } 
+    }
+    @keyframes girar { 
+        100% { 
+            -webkit-transform: rotate(360deg); 
+            transform:rotate(360deg); 
+        } 
     }
 }
 
-.explicacion {
+
+.texto-container {
     width: 48%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
-    .titulo {
-        font-size: xx-large;
-        font-weight: bold;
-    }
 }
 
 
-@media only screen and (max-width: 1200px) {
-    .imagen {
-        width: 35%;
-        height: 75%;
+.titulo {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+
+
+
+
+@media only screen and (max-width: 1150px) {
+    .img-container {
+        width: 40%;
+        img {
+            width: 80%;
+        }
     }
 
-    .explicacion {
+    .texto-container {
         width: 60%;
     }
 }
 
-@media only screen and (max-width: 1150px) {
-    .explicacion {
-        width: 57%;
-    }
-}
-
-@media only screen and (max-width: 1100px) {
-    .explicacion {
-        width: 54%;
-    }
-}
-
 @media only screen and (max-width: 1000px) {
-    .imagen {
-        display: none;
-        visibility: hidden;
-    }
-
     .eficiencia-container {
-        display: flex;
+        flex-direction: column-reverse;
         justify-content: center;
+        margin-top: v.$separacion-secciones-movil;
     }
 
-    .explicacion {
+    .texto-container {
         width: 100%;
+        align-items: center;
         text-align: center;
     }
 
-    .eficiencia-container {
-        margin-top: v.$separacion-secciones-movil;
+    .img-container {
+        margin-top: 40px;
+        width: 60%;
+        img {
+            width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .img-container {
+        width: 70%;
+        img {
+            width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .img-container {
+        width: 80%;
+        img {
+            width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .img-container {
+        width: 90%;
+        img {
+            width: 80%;
+        }
     }
 }
