@@ -1,1 +1,54 @@
-<p>coches works!</p>
+<div class="coches-container">
+
+    <div class="introduccion">
+        <div class="titulo">Nuestros coches eléctricos</div>
+        <div class="subtitulo">
+            Estos son los coches eléctricos que tenemos disponibles 
+            para alquiler en cualquier luegar de España.
+        </div>
+    </div>
+
+    <div class="coche-carta" *ngFor="let coche of coches">
+
+        <div class="caracteristicas">
+            <div class="item nombre">{{ coche.marca }} {{ coche.modelo }}</div>
+            <div class="item puntos">
+                <div class="autonomia icono-con-texto">
+                    <div class="icono">
+                        <img src="../../assets/img/iconos/bateria.svg" alt="">
+                    </div>
+                    <div class="texto">Atonomía de {{ coche.autonomia }} km</div>                
+                </div>
+                <div class="precio icono-con-texto">
+                    <div class="icono">
+                        <img src="../../assets/img/iconos/precio.svg" alt="">
+                    </div>
+                    <div class="texto">Precio de {{ coche.precio }} €/día</div>                
+                </div>
+                <div class="puertas icono-con-texto">
+                    <div class="icono">
+                        <img src="../../assets/img/iconos/puertas.svg" alt="">
+                    </div>
+                    <div class="texto">Coche de {{ coche.puertas }} puertas</div>                
+                </div>
+                <div class="embrague icono-con-texto">
+                    <div class="icono">
+                        <img src="../../assets/img/iconos/caja-cambios.svg" alt="">
+                    </div>
+                    <div class="texto">{{ embrague(coche.embrague) }}</div>                
+                </div>
+            </div>            
+            <div class="item descripcion">{{ coche.descripcion }}</div>
+            <div class="item botones">
+                <div class="boton btn1">Alquilar</div>
+                <div class="boton btn2">Leer opiniones</div>
+            </div>
+        </div>
+
+        <div class="imagen">
+            <img src="../../assets/img/coches/{{ coche.marca }} {{ coche.modelo }}.png" alt="{{ coche.marca }} {{ coche.modelo }}">
+        </div>
+
+    </div>
+
+</div>

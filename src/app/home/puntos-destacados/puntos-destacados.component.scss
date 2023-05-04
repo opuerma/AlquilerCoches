@@ -3,7 +3,6 @@
 .destacados-container {
     margin-top: v.$separacion-secciones;
     width: 100%;
-    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +47,6 @@
 
 .punto {
     width: 40%;
-    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

@@ -1,0 +1,168 @@
+@use '../variables' as v;
+
+
+.coches-container {
+    margin-top: v.$separacion-secciones;
+    width: 100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -50px;
+}
+
+
+.introduccion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+.titulo {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+
+.coche-carta {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: v.$sombra;
+    border-radius: v.$border-radius;
+    margin-top: 30px;
+}
+
+
+.caracteristicas {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 30px 40px 40px;
+}
+
+
+.item {
+    margin-top: 5px;
+
+    &:first-child {
+        margin-top: 0px;
+    }
+    &:nth-child(2) {
+        margin-top: 10px;
+    }
+}
+
+
+.nombre {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+
+.puntos {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px 50px;
+}
+
+
+.icono-con-texto {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.icono {
+    background-color: v.$c-azul;
+    border-radius: 99px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 70%;
+    }
+}
+.texto {
+    margin-left: 5px;
+}
+
+
+.descripcion {
+    margin: 15px 0px;
+}
+
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .boton {
+        margin-right: 20px;
+        width: 180px;
+        height: 40px;
+        font-weight: normal;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: v.$sombra;
+        border-radius: v.$border-radius;
+
+        &:focus {
+            outline: 1px solid black;
+        }
+    }
+    .btn1 {
+        background-color: v.$c-azul;
+        color: white;
+
+        &:hover {
+            background-color: v.$c-azul-claro
+        }
+    }
+    .btn2 {
+        background-color: white;
+        color: black;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 2px solid #cacaca;
+
+        &:hover {
+            border-color: #505050;
+        }
+    }
+}
+
+
+.imagen {
+    width: 40%;
+
+    img {
+        width: 100%;
+    }
+}
+
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}

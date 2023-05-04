@@ -4,7 +4,6 @@
     margin: auto;
     margin-top: v.$separacion-secciones;
     width: 100%;
-    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -14,7 +13,6 @@
 
 .seccion {
     width: 20%;
-    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,7 +31,6 @@
 a {
     text-decoration: none;
     color: black;
-    font-weight: 600;
 }
 
 
@@ -78,13 +75,13 @@ a {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    font-weight: 600;
 }
 .icon {
     width: 30px;
 
     img {
         height: 80%;
-        width: fit-content;
     }
 }
 
@@ -93,9 +90,9 @@ a {
     width: 100%;
 
     input {
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         height: 40px;
         font-family: v.$font;
         padding: 0px 10px;
