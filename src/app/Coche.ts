@@ -4,7 +4,7 @@ export interface Coche {
     modelo: string;
     autonomia: number;
     puertas: number;
-    embrague: boolean;
+    cajaCambios: boolean;
     precio: number;
     descripcion: string;
 }

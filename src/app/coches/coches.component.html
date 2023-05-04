@@ -17,25 +17,25 @@
                     <div class="icono">
                         <img src="../../assets/img/iconos/bateria.svg" alt="">
                     </div>
-                    <div class="texto">Atonomía de {{ coche.autonomia }} km</div>                
+                    <div class="texto">Atonomía de {{ coche.autonomia }} km</div>
                 </div>
                 <div class="precio icono-con-texto">
                     <div class="icono">
                         <img src="../../assets/img/iconos/precio.svg" alt="">
                     </div>
-                    <div class="texto">Precio de {{ coche.precio }} €/día</div>                
+                    <div class="texto">Precio de {{ coche.precio }} €/día</div>
                 </div>
                 <div class="puertas icono-con-texto">
                     <div class="icono">
                         <img src="../../assets/img/iconos/puertas.svg" alt="">
                     </div>
-                    <div class="texto">Coche de {{ coche.puertas }} puertas</div>                
+                    <div class="texto">Coche de {{ coche.puertas }} puertas</div>
                 </div>
                 <div class="embrague icono-con-texto">
                     <div class="icono">
                         <img src="../../assets/img/iconos/caja-cambios.svg" alt="">
                     </div>
-                    <div class="texto">{{ embrague(coche.embrague) }}</div>                
+                    <div class="texto">{{ this.serviceCoches.cajaCambios(coche.cajaCambios) }}</div>
                 </div>
             </div>            
             <div class="item descripcion">{{ coche.descripcion }}</div>

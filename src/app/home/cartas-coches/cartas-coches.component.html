@@ -1,0 +1,63 @@
+<div class="cartas-coches-container">
+
+    <div class="introduccion">
+        <div class="titulo">Nuestros coches eléctricos</div>
+        <div class="subtitulo">
+            Estos son los coches eléctricos que tenemos disponibles 
+            para alquiler en cualquier luegar de España.
+        </div>
+    </div>
+
+    <div class="cartas-container">
+        <div class="carta" *ngFor="let coche of coches">
+
+            <div class="imagen">
+                <img src="../../../assets/img/coches/{{ coche.marca }} {{ coche.modelo }}.png" alt="{{ coche.marca }} {{ coche.modelo }}">
+            </div>
+
+            <div class="descripcion">
+
+                <div class="nombre">{{ coche.marca }}  {{ coche.modelo }}</div>
+
+                <div class="caracteristicas">
+
+                    <div class="autonomia icono-con-texto">
+                        <div class="icono">
+                            <img src="../../../assets/img/iconos/bateria.svg" alt="">
+                        </div>
+                        <div class="texto">{{ coche.autonomia }} km</div>
+                    </div>
+    
+                    <div class="precio icono-con-texto">
+                        <div class="icono">
+                            <img src="../../../assets/img/iconos/precio.svg" alt="">
+                        </div>
+                        <div class="texto"><span>{{ coche.precio }}€</span>/día</div>
+                    </div>
+                    
+                    <div class="puertas icono-con-texto">
+                        <div class="icono">
+                            <img src="../../../assets/img/iconos/puertas.svg" alt="">
+                        </div>
+                        <div class="texto">{{ coche.puertas }} puertas</div>
+                    </div>
+                    
+                    <div class="cajaCambios icono-con-texto">
+                        <div class="icono">
+                            <img src="../../../assets/img/iconos/caja-cambios.svg" alt="">
+                        </div>
+                        <div class="texto">{{ this.serviceCoches.cajaCambios(coche.cajaCambios) }}</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="boton-container">
+                <div class="boton">Alquilar coche</div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
