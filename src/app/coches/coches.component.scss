@@ -160,9 +160,51 @@
 }
 
 
-.botones {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+
+@media only screen and (max-width: 1000px) {
+    .introduccion {
+        align-items: center;
+        text-align: center;
+    }
+    .coche-carta {
+        flex-direction: column;
+    }
+    .caracteristicas {
+        align-items: center;
+        padding-bottom: 0px;
+    }
+    .descripcion {
+        text-align: center;
+    }
+    .botones {
+        width: 90%;
+        justify-content: space-between;
+        
+    }
+    .boton {
+        margin: 0px !important;
+        width: 48% !important;
+    }
+    .imagen {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .imagen {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .botones {
+        flex-direction: column;
+        width: 100%;
+    }
+    .boton {
+        width: 100% !important;
+        &:first-child {
+            margin-bottom: 10px !important;
+        }
+    }
 }
