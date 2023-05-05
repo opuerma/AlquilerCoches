@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Coche } from '../Coche';
 import { CochesService } from '../coches.service';
 
@@ -7,12 +7,16 @@ import { CochesService } from '../coches.service';
   templateUrl: './coches.component.html',
   styleUrls: ['./coches.component.scss']
 })
-export class CochesComponent {
+export class CochesComponent implements OnInit {
  
   coches: Coche[] = [];
 
   constructor(public serviceCoches: CochesService) {
     this.coches = this.serviceCoches.getCoches();
+  }
+
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
   }
 
 }

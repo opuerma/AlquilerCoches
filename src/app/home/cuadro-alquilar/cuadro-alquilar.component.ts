@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cuadro-alquilar',
@@ -12,7 +13,7 @@ export class CuadroAlquilarComponent implements OnInit {
   errores = false;
   hoy: string;
 
-  constructor() {
+  constructor(private router: Router) {
     this.miFormulario = new FormGroup({
       lugar: new FormControl('', Validators.required),
       recogida: new FormControl('', Validators.required),
@@ -31,9 +32,10 @@ export class CuadroAlquilarComponent implements OnInit {
       this.errores = true;
       return;
     }
-
+    
+    // Si el formulario es válido...
     this.errores = false;
-    // Si el formulario es válido, hacer algo aquí, como enviarlo al servidor.
+    this.router.navigate(['coches']);
   }
   
 }

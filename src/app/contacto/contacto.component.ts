@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.scss']
 })
-export class ContactoComponent {
+export class ContactoComponent implements OnInit {
+  
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
 
 }
