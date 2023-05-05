@@ -13,7 +13,7 @@ Página web de alquiler de coches eléctricos que permite a los usuarios alquila
 - Angular
 - Sass / Scss
 
-# Imágenes del proyecto 📸
+# Imágenes del proyecto
 
 ## Inicio
 
