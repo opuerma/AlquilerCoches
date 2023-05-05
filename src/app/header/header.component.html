@@ -25,14 +25,28 @@
 
     <div class="contenedor-nav" *ngIf="movil">
 
-        <div class="logo" routerLink="">
+        <div class="logo" routerLink="" (click)="this.menuAbierto = false">
             <img src="../../../assets/img/logo.svg" alt="">
         </div>
         
-        <div class="menu">
-            <img src="../../../assets/img/menu-icon.svg" alt="Menú">
+        <div class="menu" (click)="abrirMenu()">
+            <img *ngIf="!menuAbierto" src="../../assets/img/menu-icon.svg" alt="Menú">
+            <img *ngIf="menuAbierto" src="../../assets/img/iconos/cerrar.svg" alt="Cerrar">
         </div>
-        
+    
     </div>
 
+</div>
+
+
+
+<div class="sidenav-container" *ngIf="menuAbierto">
+    <div class="sidenav">
+        <div class="opciones-container">
+            <div class="opcion" routerLink="" (click)="this.menuAbierto = false">Inicio</div>
+            <div class="opcion" routerLink="nosotros" (click)="this.menuAbierto = false">Nosotros</div>
+            <div class="opcion" routerLink="coches" (click)="this.menuAbierto = false">Coches</div>
+            <div class="opcion" routerLink="contacto" (click)="this.menuAbierto = false">Contacto</div>
+        </div>
+    </div>        
 </div>

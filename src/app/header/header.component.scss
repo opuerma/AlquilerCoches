@@ -12,7 +12,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 9;
     background-color: white;
     //background-image: linear-gradient(to bottom, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0));
 }
@@ -93,5 +93,51 @@
 
     &:hover {
         background-color: v.$c-azul-claro;
+    }
+}
+
+
+
+.sidenav-container {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.sidenav {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: moveToRight 0.8s ease-out;
+}
+.opciones-container {
+    width: 90%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.opcion {
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+        color: v.$c-azul;
+    }
+}
+
+@keyframes moveToRight {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(0px);
     }
 }

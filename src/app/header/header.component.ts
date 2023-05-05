@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   
   movil: boolean;
   customBreakpoint: string = '(max-width: 900px)';
+  menuAbierto: boolean = false;
   
   readonly breakpoint$ = this.breakpointObserver
     .observe(this.customBreakpoint)
@@ -36,6 +37,10 @@ export class HeaderComponent implements OnInit {
     else {
       this.movil = false;
     }
+  }
+
+  abrirMenu() {
+    this.menuAbierto = !this.menuAbierto;
   }
 
 }
