@@ -1,5 +1,5 @@
 <div>
-  <img src="/src/assets/img/logo-alquiler-coches.png" align="left">
+  <img src="/src/assets/img/logo-alquiler-coches.png" align="left" width="79" height="50">
   <h1>Alquiler de coches</h1>
 </div>
 
