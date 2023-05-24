@@ -21,12 +21,12 @@ Página web de alquiler de coches eléctricos que permite a los usuarios alquila
 
 ## Nosotros
 
-![Página principal](/src/assets/img/capturas-pantalla/nosotros-ss.jpeg "Página principal")
+![Página sobre nosotros](/src/assets/img/capturas-pantalla/nosotros-ss.jpeg "Página sobre nosotros")
 
 ## Coches
 
-![Página principal](/src/assets/img/capturas-pantalla/coches-ss.jpeg "Página principal")
+![Página coches](/src/assets/img/capturas-pantalla/coches-ss.jpeg "Página coches")
 
 ## Contacto
 
-![Página principal](/src/assets/img/capturas-pantalla/contacto-ss.jpeg "Página principal")
+![Página contacto](/src/assets/img/capturas-pantalla/contacto-ss.jpeg "Página contacto")
